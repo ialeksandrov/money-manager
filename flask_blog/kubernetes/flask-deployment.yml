@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-blog
+  labels:
+    app: flask-blog
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-blog
+  template:
+    metadata:
+      labels:
+        app: flask-blog
+    spec:
+      containers:
+      - name: flask-blog
+        image: localhost:5001/flask-blog:latest
