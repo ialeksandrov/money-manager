@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: flask-config
+  labels:
+    app: flask-blog
+data:
+  DB_USERNAME: admin
+  DB_PASSWORD: test

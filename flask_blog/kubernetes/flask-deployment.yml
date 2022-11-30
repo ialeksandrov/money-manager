@@ -17,3 +17,6 @@ spec:
       containers:
       - name: flask-blog
         image: localhost:5001/flask-blog:latest
+        envFrom:
+          - configMapRef:
+              name: flask-config
